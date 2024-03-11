@@ -1,5 +1,5 @@
-FROM nginx:1.24
+FROM nginx:1.23
 
-COPY source dest
+COPY index.html /usr/share/nginx/html/index.html
 
-CMD [ "executable" ] 
+CMD [ "nginx" ,"-g","daemon off;"] 
